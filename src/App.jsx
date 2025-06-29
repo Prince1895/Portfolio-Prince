@@ -1,32 +1,30 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import SkillsMarquee from "./components/SkillsMarquee"
-import ProjectsSection from "./components/ProjectsSection"
-import { ScrollProgress } from "./components/magicui/scroll-progress"
-import Education from "./components/Education"
-import Leetcode from "./components/Leetcode"
-import Contact from "./components/contact"
-import PageFooter from "./components/Footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import { ScrollProgress } from "./components/magicui/scroll-progress";
+
+// Import Pages
+import Home from "./pages/Home";
+import Project from "./pages/Project";
+import About from "./pages/About";
 
 function App() {
   return (
-   <>
-   <ScrollProgress  className="h-1"/>
-   <style>
-  {`::selection {
-    background-color: #000;
-    color: #fff;
-  }`}
-</style>
-   <Navbar/>
-   <Hero/>
-   <SkillsMarquee/>
-   <ProjectsSection/>
-   <Education/>
-   <Leetcode/>
-   <Contact/>
-   <PageFooter/>
-   </>
-  )
+    <Router>
+      <Toaster />
+      <ScrollProgress className="h-1" />
+      <style>
+        {`::selection {
+          background-color: #000;
+          color: #fff;
+        }`}
+      </style>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
 }
-export default App
+
+export default App;

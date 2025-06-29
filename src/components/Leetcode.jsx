@@ -38,7 +38,7 @@ const Leetcode = () => {
 
   return (
     <div className="relative w-full mt-24 px-4 sm:px-8 max-w-3xl mx-auto text-center">
-      <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 dark:text-white mb-8">
+      <h2 className="text-3xl sm:text-3xl font-bold mb-8">
         <AuroraText>LeetCode</AuroraText>
       </h2>
 
