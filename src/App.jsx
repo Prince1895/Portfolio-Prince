@@ -3,9 +3,9 @@ import { Toaster } from "react-hot-toast";
 import { ScrollProgress } from "./components/magicui/scroll-progress";
 
 // Import Pages
-import Home from "./pages/Home";
-import Project from "./pages/Project";
-import About from "./pages/About";
+import Home from "./Pages/Home";
+import Project from "./Pages/Project";
+import About from "./Pages/About";
 
 function App() {
   return (
