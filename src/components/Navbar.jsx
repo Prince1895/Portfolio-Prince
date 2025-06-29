@@ -14,8 +14,8 @@ const Navbar = () => {
 
   return (
     <nav className="w-full py-6 flex justify-center fixed top-0 z-50">
-      <div className="w-[750px] max-lg:w-[650px] max-sm:w-[400px] max-[400px]:w-[350px] px-2 py-1 bg-white bg-opacity-10 backdrop-blur-lg border border-black/10 flex items-center justify-center rounded-full shadow">
-        <div className="flex justify-center px-2 items-center gap-12 max-sm:gap-6 max-[400px]:gap-3 transition-all">
+      <div className="rounded-full w-[850px] max-lg:w-[800px] max-[400px]:w-[345px] max-[450px]:w-[400px] max-[350px]:w-[330px] max-[321px]:w-[310px] px-2 py-1 bg-white bg-opacity-10 backdrop-blur-lg border dark:border-white/20 flex items-center justify-center dark:shadow-none shadow">
+        <div className="flex justify-center px-2 items-center max-sm:gap-4 gap-8 max-[400px]:gap-4 max-[450px]:gap-5 transition-all">
 
           {/* Home */}
           <Link to="/">
@@ -24,15 +24,15 @@ const Navbar = () => {
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300"
               data-tooltip-id="home-tooltip"
               data-tooltip-content="Home">
-              <Tooltip id="home-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="home-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <HomeIcon
                 className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white ${pathname === "/" ? "dark:!text-[#FFC83D] !text-[#cc9e2b]" : ""}`}
               />
@@ -48,15 +48,15 @@ const Navbar = () => {
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300"
               data-tooltip-id="projects-tooltip"
               data-tooltip-content="Projects">
-                <Tooltip id="projects-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="projects-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <Folders className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white ${pathname === "/projects" ? "dark:!text-[#FFC83D] !text-[#cc9e2b]" : ""}`} />
             </motion.div>
           </Link>
@@ -67,15 +67,15 @@ const Navbar = () => {
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300"
               data-tooltip-id="about-tooltip"
               data-tooltip-content="About">
-                <Tooltip id="about-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="about-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <IoPerson
                 className={`w-[19px] h-[19px] max-sm:w-[15px] max-sm:h-[15px] text-black dark:text-white ${pathname === "/about" ? "dark:!text-[#FFC83D] !text-[#cc9e2b]" : ""}`}
               />
@@ -88,15 +88,15 @@ const Navbar = () => {
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="resume-tooltip"
               data-tooltip-content="Resume">
-                <Tooltip id="resume-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="resume-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <FileIcon className="w-[19px] h-[19px] text-black" />
             </motion.div>
           </a>
@@ -106,15 +106,15 @@ const Navbar = () => {
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="github-tooltip"
               data-tooltip-content="Github">
-                <Tooltip id="github-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="github-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <RxGithubLogo className="w-[19px] h-[19px] text-black" />
             </motion.div>
           </a>
@@ -124,15 +124,15 @@ const Navbar = () => {
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="x-tooltip"
               data-tooltip-content="X">
-                <Tooltip id="x-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="x-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <PiXLogo className="w-[19px] h-[19px] text-black" />
             </motion.div>
           </a>
@@ -142,15 +142,15 @@ const Navbar = () => {
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="linkedin-tooltip"
               data-tooltip-content="LinkedIn">
-                <Tooltip id="linkedin-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="linkedin-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <RxLinkedinLogo className="w-[19px] h-[19px] text-black" />
             </motion.div>
           </a>
@@ -159,15 +159,15 @@ const Navbar = () => {
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="linktree-tooltip"
               data-tooltip-content="LinkTree">
-                <Tooltip id="linktree-tooltip"style={{
-      backgroundColor: '#000',
-      color: '#fff',
-      fontSize: '10px',
-      padding: '4px 8px',
-      borderRadius: '6px',
-      boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
-      zIndex: 9999,
-    }} />
+              <Tooltip id="linktree-tooltip" style={{
+                backgroundColor: '#000',
+                color: '#fff',
+                fontSize: '10px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                boxShadow: '0px 2px 8px rgba(0,0,0,0.2)',
+                zIndex: 9999,
+              }} />
               <RiLinksLine className="w-[19px] h-[19px] text-black" />
             </motion.div>
           </a>

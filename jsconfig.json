@@ -1,5 +1,5 @@
 {
-  "files": [],
+  // "files": [], // Removed to allow all files under the project root to be included
   "references": [
    
   ],
