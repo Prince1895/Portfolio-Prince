@@ -32,7 +32,7 @@ const Contact = () => {
 
         setIsEmailSending(true);
         try {
-            const response = await axios.post('http://localhost:5000/api/send-email', {
+            const response = await axios.post(process.env.VITE_API_BASE + '/contact', {
   email,
   message,
 });
