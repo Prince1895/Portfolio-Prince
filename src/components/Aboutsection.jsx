@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MagicCard } from "@/components/magicui/magic-card"; // Make sure this path is correct
+import { MagicCard } from "@/components/magicui/magic-card"; 
 import { AuroraText } from "./magicui/aurora-text";
 
 const timelineData = [
@@ -22,7 +22,6 @@ const Aboutsection = () => {
       </h2>
 
       <div className="relative w-full max-w-4xl mx-auto">
-        {/* Animated vertical glowing line */}
         <motion.div
           initial={{ height: 0 }}
           whileInView={{ height: "100%" }}
@@ -30,8 +29,6 @@ const Aboutsection = () => {
           viewport={{ once: true }}
           className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-cyan-400 via-blue-500 to-indigo-500 shadow-lg blur-[1px]"
         />
-
-        {/* Timeline items */}
         {timelineData.map((item, index) => {
           const isLeft = index % 2 === 0;
 
@@ -55,11 +52,7 @@ const Aboutsection = () => {
                 <h3 className="text-xl font-semibold">{item.year}</h3>
                 <p className="text-gray-600 mt-2 text-sm">{item.description}</p>
               </MagicCard>
-
-              {/* Connector dot */}
               <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-5 h-5 bg-blue-600 rounded-full z-20 border-4 border-white shadow-md" />
-
-              {/* Horizontal connector line */}
               <div
                 className={`absolute top-1/2 w-10 h-1 bg-blue-400 ${
                   isLeft ? "left-1/2 ml-2" : "right-1/2 mr-2"

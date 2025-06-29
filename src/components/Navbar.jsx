@@ -83,7 +83,7 @@ const Navbar = () => {
           </Link>
 
 
-          {/* Resume */}
+         
           <a href="https://drive.google.com/file/d/16VAYIjaeAnD1UditSsEg-iK2q7RsY_06/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="resume-tooltip"
@@ -101,7 +101,6 @@ const Navbar = () => {
             </motion.div>
           </a>
 
-          {/* GitHub */}
           <a href="https://github.com/Prince1895" target="_blank" rel="noopener noreferrer">
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="github-tooltip"
@@ -119,7 +118,6 @@ const Navbar = () => {
             </motion.div>
           </a>
 
-          {/* X (Twitter) */}
           <a href="https://x.com/Chauhan18Prince" target="_blank" rel="noopener noreferrer">
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="x-tooltip"
@@ -137,7 +135,6 @@ const Navbar = () => {
             </motion.div>
           </a>
 
-          {/* LinkedIn */}
           <a href="https://linkedin.com/in/prince1184/" target="_blank" rel="noopener noreferrer">
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="linkedin-tooltip"
@@ -154,7 +151,7 @@ const Navbar = () => {
               <RxLinkedinLogo className="w-[19px] h-[19px] text-black" />
             </motion.div>
           </a>
-          {/* LinkTree */}
+
           <a href="https://linktr.ee/prince1184" target="_blank" rel="noopener noreferrer">
             <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: 0.95 }}
               className="hover:px-3 py-2.5 hover:bg-[#F4F4F5] rounded-full transition-all duration-300" data-tooltip-id="linktree-tooltip"

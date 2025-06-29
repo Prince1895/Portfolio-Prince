@@ -42,7 +42,6 @@ const Leetcode = () => {
         <AuroraText>LeetCode</AuroraText>
       </h2>
 
-      {/* Stat Buttons with Hover Effects */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">
         <div className="bg-yellow-100 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 text-yellow-800 dark:text-yellow-300 px-4 py-2 rounded-full text-sm font-medium shadow transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-yellow-200 dark:hover:bg-yellow-800/40">
           Total Solved: <span className="font-semibold">{stats.totalSolved}</span>
@@ -63,7 +62,7 @@ const Leetcode = () => {
         )}
       </div>
 
-      {/* Heatmap */}
+
       
       <img
         src="https://leetcard.jacoblin.cool/Prince_1184?theme=dark&ext=heatmap"
@@ -71,7 +70,6 @@ const Leetcode = () => {
         className="w-full max-w-2xl rounded-lg shadow-md mx-auto mb-6"
       />
 
-      {/* View Profile Button */}
       <a
         href="https://leetcode.com/Prince_1184/"
         target="_blank"

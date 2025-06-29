@@ -37,17 +37,13 @@ const projects = [
     live: "https://mathventure-math-game.netlify.app/",
     skills: ["React", "Tailwind CSS", "JavaScript", "Netlify"],
   },
-  
-  
-
-  // Add more projects here as needed
 ];
 
 const ProjectsSection = () => {
-  const [visibleCount, setVisibleCount] = useState(6); // Show 6 initially
+  const [visibleCount, setVisibleCount] = useState(6); 
 
   const handleLoadMore = () => {
-    setVisibleCount(projects.length); // Show all
+    setVisibleCount(projects.length); 
   };
 
   return (
