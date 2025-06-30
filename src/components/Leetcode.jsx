@@ -8,23 +8,25 @@ const Leetcode = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  useEffect(() => {
-   fetch("https://portfolio-server-six-psi.vercel.app/leetcode/Prince_1184")
-
-      .then((res) => {
-        if (!res.ok) throw new Error('Failed to fetch LeetCode stats');
-        return res.json();
-      })
-      .then((data) => {
+  .useEffect(() => {
+  fetch("https://portfolio-server-six-psi.vercel.app/leetcode/Prince_1184")
+    .then((res) => {
+      if (!res.ok) throw new Error('Failed to fetch LeetCode stats');
+      return res.json();
+    })
+    .then((data) => {
+      setTimeout(() => {
         setStats(data);
         setLoading(false);
-      })
-      .catch((err) => {
-        console.error('Fetch error:', err);
-        setError(true);
-        setLoading(false);
-      });
-  }, []);
+      }, 12000); 
+    })
+    .catch((err) => {
+      console.error('Fetch error:', err);
+      setError(true);
+      setLoading(false);
+    });
+}, []);
+
 
   if (loading) {
     return (
