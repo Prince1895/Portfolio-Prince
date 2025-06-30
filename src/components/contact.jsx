@@ -33,8 +33,7 @@ const Contact = () => {
 
         setIsEmailSending(true);
         try {
-          const response = await axios.post(
-  'https://portfolio-server-six-psi.vercel.app/api/send-email',
+          const response = await axios.post(baseUrl + 'send-email',
   { email, message }
 );
             if (response.data.success) {
