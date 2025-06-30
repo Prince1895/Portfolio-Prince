@@ -16,6 +16,7 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [isEmailSending, setIsEmailSending] = useState(false);
+    const baseUrl = import.meta.env.VITE_API_BASE;
 
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,7 +33,7 @@ const Contact = () => {
 
         setIsEmailSending(true);
         try {
-           const response = await axios.post(process.env.VITE_API_BASE + '/contact', {
+           const response = await axios.post(`${baseUrl}/send-email`, {
   email,
   message,
 });
