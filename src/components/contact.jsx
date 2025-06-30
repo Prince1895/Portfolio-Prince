@@ -33,7 +33,7 @@ const Contact = () => {
         setIsEmailSending(true);
         try {
           const response = await axios.post(
-  `${import.meta.env.VITE_API_BASE}/api/send-email`,
+  `${import.meta.env.VITE_API_BASE}`,
   { email, message }
 );
 
