@@ -9,8 +9,7 @@ const Leetcode = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-   fetch("https://leetcard.jacoblin.cool/Prince_1184?theme=catppuccinMocha&font=Belgrano&ext=heatmap")
-
+    fetch('https://leetcard.jacoblin.cool/api/Prince_1184')
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch LeetCode stats');
         return res.json();
@@ -37,6 +36,14 @@ const Leetcode = () => {
     );
   }
 
+  if (error || !stats) {
+    return (
+      <div className="text-center text-red-500 mt-6 mb-10">
+        Failed to load LeetCode data. Please try again later.
+      </div>
+    );
+  }
+
   return (
     <div className="relative w-full mt-24 px-4 sm:px-8 max-w-3xl mx-auto text-center">
       <h2 className="text-3xl sm:text-3xl font-bold mb-8">
@@ -44,27 +51,25 @@ const Leetcode = () => {
       </h2>
 
       <div className="flex flex-wrap justify-center gap-4 mb-8">
-        <div className="bg-yellow-100 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 text-yellow-800 dark:text-yellow-300 px-4 py-2 rounded-full text-sm font-medium shadow transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-yellow-200 dark:hover:bg-yellow-800/40">
+        <div className="bg-yellow-100 dark:bg-yellow-900/20 border border-yellow-400 dark:border-yellow-600 text-yellow-800 dark:text-yellow-300 px-4 py-2 rounded-full text-sm font-medium shadow">
           Total Solved: <span className="font-semibold">{stats.totalSolved}</span>
         </div>
-        <div className="bg-green-100 dark:bg-green-900/20 border border-green-400 dark:border-green-600 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium shadow transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-green-200 dark:hover:bg-green-800/40">
+        <div className="bg-green-100 dark:bg-green-900/20 border border-green-400 dark:border-green-600 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium shadow">
           Easy: <span className="font-semibold">{stats.easySolved}</span>
         </div>
-        <div className="bg-orange-100 dark:bg-orange-900/20 border border-orange-400 dark:border-orange-600 text-orange-800 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium shadow transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-orange-200 dark:hover:bg-orange-800/40">
+        <div className="bg-orange-100 dark:bg-orange-900/20 border border-orange-400 dark:border-orange-600 text-orange-800 dark:text-orange-300 px-4 py-2 rounded-full text-sm font-medium shadow">
           Medium: <span className="font-semibold">{stats.mediumSolved}</span>
         </div>
-        <div className="bg-red-100 dark:bg-red-900/20 border border-red-400 dark:border-red-600 text-red-800 dark:text-red-300 px-4 py-2 rounded-full text-sm font-medium shadow transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-red-200 dark:hover:bg-red-800/40">
+        <div className="bg-red-100 dark:bg-red-900/20 border border-red-400 dark:border-red-600 text-red-800 dark:text-red-300 px-4 py-2 rounded-full text-sm font-medium shadow">
           Hard: <span className="font-semibold">{stats.hardSolved}</span>
         </div>
         {stats.ranking && (
-          <div className="bg-purple-100 dark:bg-purple-900/20 border border-purple-400 dark:border-purple-600 text-purple-800 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium shadow transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-purple-200 dark:hover:bg-purple-800/40">
+          <div className="bg-purple-100 dark:bg-purple-900/20 border border-purple-400 dark:border-purple-600 text-purple-800 dark:text-purple-300 px-4 py-2 rounded-full text-sm font-medium shadow">
             Ranking: <span className="font-semibold">{stats.ranking}</span>
           </div>
         )}
       </div>
 
-
-      
       <img
         src="https://leetcard.jacoblin.cool/Prince_1184?theme=dark&ext=heatmap"
         alt="LeetCode Heatmap Graph"
