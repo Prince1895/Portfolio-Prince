@@ -1,12 +1,93 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🌐 Portfolio Website — Prince Kumar
 
-Currently, two official plugins are available:
+This is a full-stack personal portfolio website built using the **MERN stack** and deployed using **Vercel**. It showcases projects, education, skills, and a personal timeline in an interactive format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Frontend
+
+### 🛠️ Tech Stack
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Magic UI
+- React Router
+- React Hot Toast
+
+### 📁 Folder: https://github.com/Prince1895/Portfolio-Prince
+
+### 🚀 Features
+- Animated sections and transitions
+- Skill marquee & project showcase
+- Aurora timeline for journey
+- Education & LeetCode integration
+- Contact form section
+- Responsive and clean UI
+- Scroll progress bar
+
+### 📦 Setup Instructions
+
+```bash
+cd client
+npm install
+npm run dev      # for development
+npm run build    # for production
+```
+
+### 🔗 Deployed on Vercel
+
+Make sure `.env` includes:
+```
+VITE_BACKEND_URL=https://<your-backend>.vercel.app
+```
+
+---
+
+## ⚙️ Backend
+
+### 🛠️ Tech Stack
+- Node.js
+- Express.js
+- NodeMailer
+
+### 📁 Folder: https://github.com/Prince1895/portfolio-server
+
+### 💡 Features
+- APIs for form submissions, email sending, or project handling (if implemented)
+
+### 📦 Setup Instructions
+
+```bash
+cd server
+npm install
+npm run start    # or node index.js
+```
+
+### 🔗 Deployed on Vercel (Serverless)
+
+Use [Vercel's Serverless Functions](https://vercel.com/docs/functions) to deploy the backend:
+- Ensure your `index.js` exports as a handler.
+- All routes should reside under `api/` for Vercel.
+
+---
+
+## 📸 Screenshots
+
+https://github.com/Prince1895/Portfolio-Prince/blob/main/public/desktop-portfolio.png
+
+https://github.com/Prince1895/Portfolio-Prince/blob/main/public/phone-portfolio.jpg
+
+---
+
+## 📮 Contact
+
+For queries, reach out via the Contact section on the portfolio or directly at [chuhanprince21153366@example.com].
+
+---
+
+## 📄 License
+
+MIT © Prince Kumar
