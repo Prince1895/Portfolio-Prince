@@ -32,11 +32,10 @@ const Contact = () => {
 
         setIsEmailSending(true);
         try {
-            const response = await axios.post(import.meta.env.VITE_API_BASE + 'api/send-email'
-, {
-  email,
-  message,
-});
+            const response = await axios.post(`${import.meta.env.VITE_API_BASE}/api/send-email`, {
+                email,
+                message,
+            });
 
             if (response.data.success) {
                 toast.success(response.data.message);
