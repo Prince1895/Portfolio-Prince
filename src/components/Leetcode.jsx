@@ -9,7 +9,8 @@ const Leetcode = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch('https://leetcode-stats-api.herokuapp.com/Prince_1184')
+   fetch("https://portfolio-server-six-psi.vercel.app/leetcode/Prince_1184")
+
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch LeetCode stats');
         return res.json();
