@@ -8,22 +8,28 @@ import asianschoollogo from '@/assets/asianschool.png'; // Assuming you have the
 
 const educationData = [
   {
-    course_title: 'Bachelor of Technology - Computer Science(Data Science)',
+    course_title: 'Bachelor of Technology - Computer Science (Data Science)',
     institute_name: 'ABES Engineering College',
     institute_logo: Abeslogo,
     institute_link: 'https://www.abes.ac.in/',
-    ending_date: '2023-2027',
-    description: 'Focused on software engineering, algorithms, databases,full-stack web development and Specialization in Data Science.'
+    ending_date: '2027 (Expected)',
+    starting_date: '2023',
+    description: 'Focused on software engineering, algorithms, databases, full-stack web development, and specialization in Data Science.',
+    grade:"8.5/10 (till 3rd Semester)"
+ 
+    
   },
   {
     course_title: 'Higher Secondary Education (12th Grade)',
+    course_title1: 'Secondary Education (10th Grade)',
     institute_name: 'The Asian School',
     institute_logo: asianschoollogo,
-    institute_link:' https://www.apsshikohabad.in/',
-    ending_date: '2021-2022',
-    
-  },
+    institute_link: 'https://www.apsshikohabad.in/',
+    ending_date: '2022',
+    starting_date: '2019',
+  }
 ];
+
 
 const Education = () => {
   return (
@@ -40,6 +46,8 @@ const Education = () => {
             gradientColor="rgba(197, 241, 241, 0.4)"
           >
             <div className="flex flex-col sm:flex-row w-full gap-4 px-6 py-5 sm:px-6 sm:py-5 items-start">
+
+
               <div className="shrink-0 rounded-full overflow-hidden inline-block hover:scale-115 transition-transform duration-300 ease-in-out">
                 <a href={edu.institute_link} target="_blank" rel="noopener noreferrer">
                   <img
@@ -50,18 +58,34 @@ const Education = () => {
                 </a>
               </div>
 
-
               <div className="w-full">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
+
                   <h1 className="text-lg sm:text-xl font-semibold mb-1 bricolage-font">
-                    {edu.course_title}
+                    {edu.institute_name}
                   </h1>
+
                   <span className="text-sm text-gray-500 sm:text-right">
-                    {edu.ending_date}
+                    {edu.starting_date} – {edu.ending_date}
                   </span>
                 </div>
-                <h2 className="text-sm text-gray-700 inter-font">{edu.institute_name}</h2>
-                <p className="mt-2 text-sm text-gray-600 inter-font">{edu.description}</p>
+
+                <h2 className="text-sm text-gray-700 inter-font font-medium mt-1">
+                  {edu.course_title}
+                </h2>
+                 <h2 className="text-sm text-gray-700 inter-font font-medium mt-1">
+                  {edu.course_title1}
+                </h2>
+
+                {edu.grade && (
+                  <p className="text-sm text-gray-600 inter-font mt-1">
+                    <strong>Grade:</strong> {edu.grade}
+                  </p>
+                )}
+
+                <p className="mt-2 text-sm text-gray-600 inter-font">
+                  {edu.description}
+                </p>
               </div>
             </div>
           </MagicCard>

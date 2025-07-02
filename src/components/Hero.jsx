@@ -18,7 +18,7 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.8,
-            ease: [0.25, 0.46, 0.45, 0.94], 
+            ease: [0.25, 0.46, 0.45, 0.94],
             type: "spring",
             stiffness: 80,
           }}
@@ -35,8 +35,8 @@ const Hero = () => {
         </motion.a>
 
         <h1
-            className="text-[4rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] mt-4 text-center font-bold tracking-tight"
-  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
+          className="text-[4rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] mt-4 text-center font-bold tracking-tight"
+          style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
         >
           <TypeAnimation
             sequence={[
@@ -63,39 +63,39 @@ const Hero = () => {
           </motion.p>
         </div>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center justify-center">
-  <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 2.5, duration: 0.8 }}
-  >
-    <a
-      href="https://www.linkedin.com/in/prince1184/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <RainbowButton>Let's Connect</RainbowButton>
-    </a>
-  </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 0.8 }}
+          >
+            <a
+              href="https://www.linkedin.com/in/prince1184/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RainbowButton>Let's Connect</RainbowButton>
+            </a>
+          </motion.div>
 
-  <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 2.5, duration: 0.8 }}
-  >
-    <RainbowButton>
-      <ScrollLink
-        to="contact-section"
-        activeClass="active"
-        smooth={true}
-        offset={-120}
-        duration={1100}
-      >
-        Get in touch
-      </ScrollLink>
-    </RainbowButton>
-  </motion.div>
-</div>
-
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2.5, duration: 0.8 }}
+          >
+            <RainbowButton>
+              <ScrollLink
+                to="contact-section"
+                activeClass="active"
+                smooth={true}
+                offset={-120}
+                duration={1100}
+              >
+                Get in touch
+              </ScrollLink>
+            </RainbowButton>
+          </motion.div>
+        </div>
+      
 
 
       </div>

@@ -6,6 +6,7 @@ import { ScrollProgress } from "./components/magicui/scroll-progress";
 import Home from "./Pages/Home";
 import Project from "./Pages/Project";
 import About from "./Pages/About";
+import { RainbowButton } from "./components/magicui/rainbow-button";
 
 function App() {
   return (
@@ -18,6 +19,16 @@ function App() {
           color: #fff;
         }`}
       </style>
+        <RainbowButton className="fixed bottom-4 right-4 z-50 flex hover:scale-110">
+          <a
+            href="/your-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+           
+          >
+            📄 Resume
+          </a>
+        </RainbowButton>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Project />} />

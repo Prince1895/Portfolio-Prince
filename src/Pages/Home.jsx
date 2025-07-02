@@ -6,18 +6,31 @@ import Education from "../components/Education";
 import Leetcode from "../components/Leetcode";
 import Contact from "../components/contact";
 import PageFooter from "../components/Footer";
+import { Meteors } from "@/components/magicui/meteors";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <SkillsMarquee />
-      <ProjectsSection />
-      <Education />
-      <Leetcode />
-      <Contact />
-      <PageFooter />
+<div className="relative w-full">
+ 
+  <div className="absolute inset-0 z-0">
+    <Meteors number={30} />
+  </div>
+
+  <div className="relative z-10">
+    <Navbar />
+    <Hero />
+    <SkillsMarquee />
+    <ProjectsSection />
+    <Education />
+    <Leetcode />
+    <Contact />
+    <PageFooter />
+  </div>
+</div>
+
+
+      
     </>
   );
 };

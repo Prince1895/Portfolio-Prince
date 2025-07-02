@@ -38,7 +38,7 @@ const SkillsMarquee = () => {
       <div className="pointer-events-none absolute top-0 right-0 h-full w-12 z-10 bg-gradient-to-l from-white to-transparent" />
 
 
-      <Marquee speed={40} gradient={false} className="py-6 bg-white rounded-xl shadow-inner mb-4">
+      <Marquee speed={40} gradient={false} pauseOnHover={true} className="py-6 bg-white rounded-xl shadow-inner mb-4">
         {skills.map((skill, index) => (
           <div
             key={`forward-${index}`}
@@ -50,7 +50,7 @@ const SkillsMarquee = () => {
         ))}
       </Marquee>
 
-      <Marquee speed={40} gradient={false} reverse className="py-6 bg-white rounded-xl shadow-inner">
+      <Marquee speed={40} gradient={false} pauseOnHover={true} reverse className="py-6 bg-white rounded-xl shadow-inner">
         {skills.map((skill, index) => (
           <div
             key={`reverse-${index}`}
