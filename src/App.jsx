@@ -21,7 +21,7 @@ function App() {
       </style>
         <RainbowButton className="fixed bottom-4 right-4 z-50 flex hover:scale-110">
           <a
-            href="/your-resume.pdf"
+            href="https://drive.google.com/file/d/16VAYIjaeAnD1UditSsEg-iK2q7RsY_06/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
            
