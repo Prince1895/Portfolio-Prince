@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import avtar from '../assets/avtarpng.png'
+import avtar from '../assets/profile_img.png'
 import { TypeAnimation } from 'react-type-animation'
 import { RainbowButton } from './magicui/rainbow-button'
 import { Link as ScrollLink } from 'react-scroll'
