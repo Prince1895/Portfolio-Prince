@@ -6,7 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import portfolioprojectimage from "@/assets/portfolioproject.png";
 import DomikoProjectImage from "@/assets/DomikoProjectImage.png";
 import MathVenture from "@/assets/MathVenture.png";
-import LevelUp from "@/assets/LevelUp.png";
+import LevelUp from "@/assets/Levelup.png";
 import { ShimmerButton } from "./magicui/shimmer-button";
 import { RainbowButton } from "./magicui/rainbow-button";
 
