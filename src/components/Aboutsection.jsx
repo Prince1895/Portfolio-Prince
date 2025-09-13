@@ -16,7 +16,7 @@ const timelineData = [
 
 const Aboutsection = () => {
   return (
-    <div className="w-full bg-white py-20 px-4">
+    <div className="w-full bg-white py-16 px-4">
       <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-16">
         <AuroraText>The Evolution: From Curiosity to Code</AuroraText>
       </h2>

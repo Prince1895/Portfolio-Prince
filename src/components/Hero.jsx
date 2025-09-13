@@ -59,7 +59,7 @@ const Hero = () => {
             transition={{ delay: 2, duration: 0.8 }}
             className="mt-2 max-sm:mt-5 max-sm:px-3 text-base max-sm:text-sm text-center font-normal tracking-normal leading-6 inter"
           >
-            19, I build fast, break limits, and ship without fear. Obsessed with clean logic, real-world systems, and relentless learning. Code is my playground, curiosity my fuel. If you're building with purpose, I'm in
+           I'm Prince Kumar, a versatile professional with expertise in multiple domains. I am a Full Stack Web Developer and passionate DevOps practitioner. I actively engage in competitive programming, holding  LeetCode (1720 rating, 350+ problems solved). Currently, I am pursuing my 3rd year at ABES Engineering college, where I am honing my skills and expanding my knowledge. I am excited to collaborate on innovative projects, contribute to the open-source community, and create remarkable web experiences. Let's connect and explore the possibilities together!
           </motion.p>
         </div>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 items-center justify-center">

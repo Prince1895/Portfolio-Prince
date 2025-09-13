@@ -13,9 +13,7 @@ const Home = () => {
     <>
 <div className="relative w-full">
  
-  <div className="absolute inset-0 z-0">
-    <Meteors number={30} />
-  </div>
+
 
   <div className="relative z-10">
     <Navbar />

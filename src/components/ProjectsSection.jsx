@@ -6,6 +6,7 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import portfolioprojectimage from "@/assets/portfolioproject.png";
 import DomikoProjectImage from "@/assets/DomikoProjectImage.png";
 import MathVenture from "@/assets/MathVenture.png";
+import LevelUp from "@/assets/LevelUp.png";
 import { ShimmerButton } from "./magicui/shimmer-button";
 import { RainbowButton } from "./magicui/rainbow-button";
 
@@ -37,6 +38,14 @@ const projects = [
     live: "https://mathventure-math-game.netlify.app/",
     skills: ["React", "Tailwind CSS", "JavaScript", "Netlify"],
   },
+  {
+    title:"LevelUp - Online Coding Platform",
+    description:"LevelUp is a coding platform that provides a user-friendly interface for learning and practicing coding skills.",
+    image:LevelUp,
+    github:"https://github.com/Prince1895/SkillSphere",
+    live:"https://levelup01.vercel.app/",
+    skills:["React", "Tailwind CSS", "JavaScript","Shadcn", "Netlify"],
+  }
 ];
 
 const ProjectsSection = () => {
