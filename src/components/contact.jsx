@@ -68,50 +68,7 @@ const Contact = () => {
                     </Link>
                 </div>
 
-                <div className="mt-6">
-                    <h2 className="text-lg text-start max-sm:text-base">Reach Out via Email</h2>
-                </div>
-
-                <div className="w-full flex justify-center">
-                    <div className="mt-4 w-full">
-                        {/* ❗ IMPORTANT CHANGE: Removed the form and replaced with a div */}
-                        {/* The onClick handler is now on the button itself */}
-                        <div className="flex flex-col gap-4">
-                            <div className="grid w-full gap-2">
-                                <Label htmlFor="email">Your Email</Label>
-                                <Input
-                                    id="email"
-                                    type="text"
-                                    className="w-full border"
-                                    placeholder="johndoe69@xyz.com"
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    required
-                                />
-                            </div>
-
-                            <div className="grid w-full gap-2">
-                                <Label htmlFor="message">Your Message</Label>
-                                <Textarea
-                                    id="message"
-                                    placeholder="Type your message here."
-                                    value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    required
-                                    minLength={5}
-                                />
-                            </div>
-
-                            {/* ❗ IMPORTANT CHANGE: Added onClick handler to the button */}
-                            <Button 
-                                className="mt-3 transition-all duration-300 hover:scale-105" 
-                                onClick={handleEmailClick}
-                            >
-                                Send Message
-                            </Button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     );
