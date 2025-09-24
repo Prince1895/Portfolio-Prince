@@ -6,55 +6,45 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Button } from './ui/button';
-import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 import { AuroraText } from './magicui/aurora-text';
 
-
 const Contact = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [isEmailSending, setIsEmailSending] = useState(false);
-    const baseUrl = import.meta.env.VITE_API_BASE;
 
     const validateEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
 
-    const sendEmailMessage = async (e) => {
-        e.preventDefault();
-
+    // This function will now handle opening the email client
+    const handleEmailClick = () => {
         if (!validateEmail(email)) {
             toast.error('Please enter a valid email address.');
             return;
         }
 
-        setIsEmailSending(true);
-        try {
-          const response = await axios.post(baseUrl + 'send-email',
-  { email, message }
-);
-            if (response.data.success) {
-                toast.success(response.data.message);
-                setEmail('');
-                setMessage('');
-            } else {
-                toast.error(response.data.message);
-            }
-        } catch (error) {
-            toast.error(error.message);
-        } finally {
-            setIsEmailSending(false);
-        }
+        // Create the mailto link with encoded subject and body
+        const subject = encodeURIComponent(`New Portfolio Message from ${email}`);
+        const body = encodeURIComponent(`Message from: ${email}\n\nMessage:\n${message}`);
+        
+        const mailtoUrl = `mailto:youremail@example.com?subject=${subject}&body=${body}`;
+        
+        // Open the user's default email client
+        window.location.href = mailtoUrl;
+
+        // Optionally, clear the form after the action
+        // setEmail('');
+        // setMessage('');
     };
 
     return (
         <div
             className="w-full px-64 max-[1285px]:px-52 max-lg:px-4 max-sm:px-2 flex flex-col items-center mt-24 pb-8 "
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-       id='contact-section' >
+            id='contact-section' >
             <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">
                 <AuroraText> Get in touch </AuroraText>
             </h2>
@@ -84,7 +74,9 @@ const Contact = () => {
 
                 <div className="w-full flex justify-center">
                     <div className="mt-4 w-full">
-                        <form className="flex flex-col gap-4" onSubmit={sendEmailMessage}>
+                        {/* ❗ IMPORTANT CHANGE: Removed the form and replaced with a div */}
+                        {/* The onClick handler is now on the button itself */}
+                        <div className="flex flex-col gap-4">
                             <div className="grid w-full gap-2">
                                 <Label htmlFor="email">Your Email</Label>
                                 <Input
@@ -110,10 +102,14 @@ const Contact = () => {
                                 />
                             </div>
 
-                            <Button className="mt-3 transition-all duration-300 hover:scale-105" disabled={isEmailSending}>
-                                {isEmailSending ? 'Sending Message...' : 'Send Message'}
+                            {/* ❗ IMPORTANT CHANGE: Added onClick handler to the button */}
+                            <Button 
+                                className="mt-3 transition-all duration-300 hover:scale-105" 
+                                onClick={handleEmailClick}
+                            >
+                                Send Message
                             </Button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
