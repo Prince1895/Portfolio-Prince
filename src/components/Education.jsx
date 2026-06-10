@@ -4,7 +4,7 @@ import React from 'react';
 import { MagicCard } from './magicui/magic-card';
 import { AuroraText } from './magicui/aurora-text';
 import Abeslogo from '@/assets/ABESlogo.png';
-import asianschoollogo from '@/assets/asianschool.png'; // Assuming you have the logo for The Asian School
+import asianschoollogo from '@/assets/asianschool.png';
 
 const educationData = [
   {
@@ -15,9 +15,7 @@ const educationData = [
     ending_date: '2027 (Expected)',
     starting_date: '2023',
     description: 'Focused on software engineering, algorithms, databases, full-stack web development, and specialization in Data Science.',
-    grade:"8.5/10 (till 3rd Semester)"
- 
-    
+    grade: '8.5/10 (till 3rd Semester)'
   },
   {
     course_title: 'Higher Secondary Education (12th Grade)',
@@ -30,62 +28,64 @@ const educationData = [
   }
 ];
 
-
 const Education = () => {
   return (
     <div className="w-full px-4 sm:px-8 md:px-10 mt-24 flex flex-col items-center justify-center mb-8">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">
-        <AuroraText> Education </AuroraText>
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-8">
+        <AuroraText>Education</AuroraText>
       </h2>
 
       <div className="w-full max-w-3xl space-y-6">
         {educationData.map((edu, idx) => (
           <MagicCard
             key={idx}
-            className="cursor-pointer shadow-md bg-white border border-gray-200 transition-all rounded-xl w-full"
-            gradientColor="rgba(197, 241, 241, 0.4)"
+            className="cursor-pointer !bg-zinc-950/40 backdrop-blur-md border border-white/5 hover:border-white/10 transition-all duration-300 rounded-xl w-full"
+            gradientColor="rgba(59, 130, 246, 0.2)"
+            gradientSize={200}
+            gradientOpacity={0.25}
           >
             <div className="flex flex-col sm:flex-row w-full gap-4 px-6 py-5 sm:px-6 sm:py-5 items-start">
 
-
-              <div className="shrink-0 rounded-full overflow-hidden inline-block hover:scale-115 transition-transform duration-300 ease-in-out">
+              <div className="shrink-0 rounded-full overflow-hidden bg-zinc-900 border border-white/5 p-1 inline-block hover:scale-105 transition-transform duration-300 ease-in-out">
                 <a href={edu.institute_link} target="_blank" rel="noopener noreferrer">
                   <img
                     src={edu.institute_logo}
                     alt="institute-logo"
-                    className="h-auto max-h-14 w-auto max-w-14 object-contain"
+                    className="h-12 w-12 object-contain"
                   />
                 </a>
               </div>
 
               <div className="w-full">
-                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between">
-
-                  <h1 className="text-lg sm:text-xl font-semibold mb-1 bricolage-font">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1">
+                  <h1 className="text-lg sm:text-xl font-semibold mb-1 bricolage-font text-zinc-100 group-hover:text-white transition-colors">
                     {edu.institute_name}
                   </h1>
-
-                  <span className="text-sm text-gray-500 sm:text-right">
+                  <span className="text-sm text-zinc-400 sm:text-right font-medium">
                     {edu.starting_date} – {edu.ending_date}
                   </span>
                 </div>
 
-                <h2 className="text-sm text-gray-700 inter-font font-medium mt-1">
+                <h2 className="text-sm text-zinc-300 inter-font font-medium mt-1">
                   {edu.course_title}
                 </h2>
-                 <h2 className="text-sm text-gray-700 inter-font font-medium mt-1">
-                  {edu.course_title1}
-                </h2>
+                {edu.course_title1 && (
+                  <h2 className="text-sm text-zinc-300 inter-font font-medium mt-1">
+                    {edu.course_title1}
+                  </h2>
+                )}
 
                 {edu.grade && (
-                  <p className="text-sm text-gray-600 inter-font mt-1">
-                    <strong>Grade:</strong> {edu.grade}
+                  <p className="text-sm text-zinc-400 inter-font mt-2">
+                    <strong className="text-zinc-200 font-semibold">Grade:</strong> {edu.grade}
                   </p>
                 )}
 
-                <p className="mt-2 text-sm text-gray-600 inter-font">
-                  {edu.description}
-                </p>
+                {edu.description && (
+                  <p className="mt-2 text-sm text-zinc-400 leading-relaxed inter-font">
+                    {edu.description}
+                  </p>
+                )}
               </div>
             </div>
           </MagicCard>

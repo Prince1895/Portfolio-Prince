@@ -1,140 +1,119 @@
 "use client";
-import React, { useState } from "react";
-import { MagicCard } from "@/components/magicui/magic-card";
+import React, { useState, useEffect } from "react";
 import { AuroraText } from "@/components/magicui/aurora-text";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt, FaStar } from "react-icons/fa";
 import portfolioprojectimage from "@/assets/portfolioproject.png";
 import DomikoProjectImage from "@/assets/DomikoProjectImage.png";
 import MathVenture from "@/assets/MathVenture.png";
 import LevelUp from "@/assets/Levelup.png";
-import { ShimmerButton } from "./magicui/shimmer-button";
-import { RainbowButton } from "./magicui/rainbow-button";
+import { getPortfolioData } from "../utils/portfolioData";
 
-const projects = [
-  {
-    title: "Portfolio - Prince Kumar",
-    description:
-      "A personal portfolio built with React, Tailwind CSS, and animations.",
-    image: portfolioprojectimage,
-    skills: ["React", "Tailwind CSS", "Framer Motion", "Magic Ui", "Shadcn UI"],
-    github: "https://github.com/Prince1895/Portfolio-Prince",
-    live: "",
-  },
-  {
-    title: "Domiko - Where Ideas Click",
-    description:
-      "A full-stack Blogging Platform with JWT auth and RESTful API.",
-    image: DomikoProjectImage,
-    github: "https://github.com/Prince1895/Domiko",
-    live: "https://domiko-client.vercel.app/",
-    skills: ["MongoDB", "Express", "React", "Node.js", "JWT", "imagekit.io"],
-  },
-  {
-    title: "MathVenture - Math Learning App for (3-8) Year Olds",
-    description:
-      "MathVenture is a web-based math game that teaches kids basic operations (add, subtract, multiply, divide).",
-    image: MathVenture,
-    github: "https://github.com/Prince1895/MathVenture",
-    live: "https://mathventure-math-game.netlify.app/",
-    skills: ["React", "Tailwind CSS", "JavaScript", "Netlify"],
-  },
-  {
-    title:"LevelUp - Online Coding Platform",
-    description:"LevelUp is a coding platform that provides a user-friendly interface for learning and practicing coding skills.",
-    image:LevelUp,
-    github:"https://github.com/Prince1895/SkillSphere",
-    live:"https://levelup01.vercel.app/",
-    skills:["React", "Tailwind CSS", "JavaScript","Shadcn", "Netlify"],
-  }
-];
+// Helper map to associate image names to their asset variables
+const imageMap = {
+  "01": portfolioprojectimage,
+  "02": DomikoProjectImage,
+  "03": MathVenture,
+  "04": LevelUp,
+};
 
 const ProjectsSection = () => {
-  const [visibleCount, setVisibleCount] = useState(6); 
+  const [projectList, setProjectList] = useState(() => getPortfolioData().projects);
+  const [visibleCount, setVisibleCount] = useState(4);
 
-  const handleLoadMore = () => {
-    setVisibleCount(projects.length); 
-  };
+  useEffect(() => {
+    const handleUpdate = () => {
+      setProjectList(getPortfolioData().projects);
+    };
+    window.addEventListener('portfolio-data-updated', handleUpdate);
+    return () => window.removeEventListener('portfolio-data-updated', handleUpdate);
+  }, []);
 
   return (
-    <div className="w-full px-4 mt-16 sm:px-10 py-16 bg-white" id="projects">
-      <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-8">
-        <AuroraText>Projects</AuroraText>
+    <div className="w-full px-4 sm:px-10 py-20 bg-transparent" id="projects">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center text-white mb-16">
+        Featured <AuroraText>Projects</AuroraText>
       </h2>
 
-      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
-        {projects.slice(0, visibleCount).map((project, index) => (
-          <MagicCard
-            key={index}
-            gradientColor="#ADD8E6"
-            gradientOpacity={0.4}
-            gradientSize={200}
-            className="w-full h-full !bg-white shadow-xl rounded-xl p-5 flex flex-col"
-          >
-            <div className="relative w-full h-48 mb-4 overflow-hidden rounded-lg group">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full h-full transform transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-105"
-              />
-              <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white dark:from-[#1a1a1a] to-transparent pointer-events-none" />
-            </div>
-
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-600 text-sm">{project.description}</p>
-            </div>
-
-            <div className="flex flex-wrap gap-2 mt-4">
-              {project.skills.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-1 rounded-full border border-blue-200"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-6 flex flex-wrap gap-3">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 sm:gap-16">
+        {projectList.slice(0, visibleCount).map((project, index) => (
+          <div key={index} className="flex flex-col">
+            
+            {/* Header row: Number + Category on Left, Star Button on Right */}
+            <div className="flex justify-between items-center mb-2">
+              <div className="text-[10px] sm:text-xs font-bold text-zinc-500 uppercase tracking-widest flex items-center gap-2">
+                <span>{project.num}</span>
+                <span className="w-1 h-1 rounded-full bg-zinc-700" />
+                <span>{project.type}</span>
+              </div>
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="px-3 py-1 rounded-full bg-purple-600/10 border border-purple-500/20 text-purple-400 hover:text-white hover:bg-purple-600 hover:border-purple-500 text-[10px] sm:text-xs font-bold transition-all flex items-center gap-1.5 shadow-[0_0_15px_rgba(168,85,247,0.05)]"
               >
-                <ShimmerButton className="px-3 py-1 text-sm">
-                  <span className="flex items-center gap-2">
-                    <FaGithub /> Source
-                  </span>
-                </ShimmerButton>
+                <FaStar className="text-[10px] sm:text-xs" /> Star
               </a>
+            </div>
+
+            {/* Project Title */}
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+              {project.title}
+            </h3>
+
+            {/* Main Project Card (Mockup image at bottom) */}
+            <div className={`w-full rounded-3xl border border-white/5 bg-gradient-to-b ${project.gradient || 'from-purple-600/25 via-indigo-800/10 to-transparent'} backdrop-blur-md overflow-hidden flex flex-col justify-between p-6 sm:p-8 min-h-[360px] sm:min-h-[420px] transition-all duration-300 hover:border-white/10 group`}>
+              {/* Description (Top) */}
+              <p className="text-zinc-300 text-sm leading-relaxed mb-6">
+                {project.description}
+              </p>
+
+              {/* Mockup Image (Bottom) */}
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-white/5 mt-auto shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+                <img
+                  src={imageMap[project.num] || portfolioprojectimage}
+                  alt={project.title}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+            </div>
+
+            {/* Tech Badges & External Link (Outside the card) */}
+            <div className="flex flex-wrap items-center justify-between gap-3 mt-4">
+              <div className="flex flex-wrap gap-1.5">
+                {project.skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-white/5 text-zinc-400 text-[10px] font-semibold px-2.5 py-1 rounded-full border border-white/5"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
               {project.live && (
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white font-bold text-xs flex items-center gap-1 transition-colors self-end"
                 >
-                  <ShimmerButton className="px-3 py-1 text-sm">
-                    <span className="flex items-center gap-2">
-                      <FaExternalLinkAlt /> Website
-                    </span>
-                  </ShimmerButton>
+                  Live <FaExternalLinkAlt className="text-[10px]" />
                 </a>
               )}
             </div>
-          </MagicCard>
+
+          </div>
         ))}
       </div>
 
-      {visibleCount < projects.length && (
-        <div className="flex justify-center mt-10">
-          <RainbowButton
-            className="px-6 py-2 text-sm"
-            onClick={handleLoadMore}
+      {/* Dynamic Show More Toggle */}
+      {projectList.length > 4 && (
+        <div className="flex justify-center mt-16">
+          <button
+            onClick={() => setVisibleCount(prev => prev === 4 ? projectList.length : 4)}
+            className="px-6 py-3 rounded-full bg-zinc-950 border border-white/5 text-zinc-400 hover:text-white hover:border-white/10 hover:bg-zinc-900 text-xs font-bold transition-all tracking-wide shadow-lg hover:scale-105"
           >
-            Load More Projects 
-          </RainbowButton>
+            {visibleCount === 4 ? `Show More Projects (${projectList.length - 4})` : "Show Less"}
+          </button>
         </div>
       )}
     </div>

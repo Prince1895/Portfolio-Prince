@@ -1,34 +1,27 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import SkillsMarquee from "../components/SkillsMarquee";
+import BentoGrid from "../components/BentoGrid";
+import TagCloud3D from "../components/TagCloud3D";
 import ProjectsSection from "../components/ProjectsSection";
-import Education from "../components/Education";
-import Leetcode from "../components/Leetcode";
+import MoreToExplore from "../components/MoreToExplore";
 import Contact from "../components/contact";
 import PageFooter from "../components/Footer";
-import { Meteors } from "@/components/magicui/meteors";
 
 const Home = () => {
   return (
     <>
-<div className="relative w-full">
- 
-
-
-  <div className="relative z-10">
-    <Navbar />
-    <Hero />
-    <SkillsMarquee />
-    <ProjectsSection />
-    <Education />
-    <Leetcode />
-    <Contact />
-    <PageFooter />
-  </div>
-</div>
-
-
-      
+      <div className="relative w-full">
+        <div className="relative z-10">
+          <Navbar />
+          <Hero />
+          <BentoGrid />
+          <TagCloud3D />
+          <ProjectsSection />
+          <MoreToExplore />
+          <Contact />
+          <PageFooter />
+        </div>
+      </div>
     </>
   );
 };
