@@ -1,0 +1,33 @@
+/* CustomCursor.css */
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(139, 92, 246, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.15);
+}
+
+/* Hide default cursor on desktop screens */
+body.no-cursor,
+body.no-cursor * {
+  cursor: none !important;
+}

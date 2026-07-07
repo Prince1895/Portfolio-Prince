@@ -4,7 +4,7 @@ import { MagicCard } from "@/components/magicui/magic-card";
 import { AuroraText } from "./magicui/aurora-text";
 
 const timelineData = [
-  { year: "🧪 2025", description: "Deepening my expertise in the Full stack and Web3, solving 300+ LeetCode problems (rated 1721), and building multiple hands-on projects focused on backend development, authentication, and real-world use cases." },
+  { year: "🧪 2025", description: "Deepening my expertise in the Full stack and Web3, solving 700+ LeetCode problems (rated 1721), and building multiple hands-on projects focused on backend development, authentication, and real-world use cases." },
   { year: "⚡ 2024", description: "Kickstarted my DSA journey on LeetCode, honed my frontend skills in JavaScript and CSS, faced challenges, and stayed consistent through the learning curve." },
   { year: "🚀 2023", description: "Began my B.Tech degree. Invested in a gaming laptop, explored the world of e-gaming, and simultaneously learned Java and foundational web development." },
   { year: "📚 2022", description: "Completed 12th grade. Started learning SQL and relational databases, laying the groundwork for backend development." },
@@ -44,9 +44,8 @@ const Aboutsection = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <MagicCard
-                className={`relative p-6 rounded-2xl max-w-xs w-full z-10 border border-white/5 !bg-zinc-950/40 backdrop-blur-md transition-all duration-300 ${
-                  isLeft ? "mr-auto ml-12 text-left" : "ml-auto mr-12 text-right"
-                }`}
+                className={`relative p-6 rounded-2xl max-w-xs w-full z-10 border border-white/5 !bg-zinc-950/40 backdrop-blur-md transition-all duration-300 ${isLeft ? "mr-auto ml-12 text-left" : "ml-auto mr-12 text-right"
+                  }`}
                 gradientColor="rgba(59, 130, 246, 0.25)"
                 gradientSize={220}
                 gradientOpacity={0.3}
@@ -60,9 +59,8 @@ const Aboutsection = () => {
 
               {/* Horizontal connecting bar — hidden on small screens */}
               <div
-                className={`hidden sm:block absolute top-1/2 w-10 h-px bg-white/10 ${
-                  isLeft ? "left-1/2 ml-2" : "right-1/2 mr-2"
-                }`}
+                className={`hidden sm:block absolute top-1/2 w-10 h-px bg-white/10 ${isLeft ? "left-1/2 ml-2" : "right-1/2 mr-2"
+                  }`}
               />
             </motion.div>
           );

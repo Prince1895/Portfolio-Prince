@@ -9,72 +9,202 @@ const defaultPortfolioData = {
     title: "Full Stack Developer & DevOps Practitioner",
     twitterUrl: "https://twitter.com/intent/follow?screen_name=Chauhan18Prince",
     chatbot: {
-      welcome: "Hi! I am Prince's AI assistant. Ask me anything about his skills, projects, education, or contact details, or choose a suggestion below!",
-      skillsResponse: "Prince is a Full Stack Developer & DevOps Practitioner. His core tech stack includes React, Node.js, Express, Java, Python, MongoDB, MySQL, Git, and Tailwind CSS. He also has a strong foundation in Data Structures and Algorithms with a LeetCode rating of 1720+.",
-      projectsResponse: "Some of Prince's key projects are:\n\n1. **Domiko**: A full-stack blogging platform with JWT authentication.\n2. **LevelUp**: An online interactive coding platform built with React.\n3. **MathVenture**: An educational math game for kids.",
-      educationResponse: "Prince is currently pursuing his Bachelor of Technology in Computer Science (specializing in Data Science) at ABES Engineering College (Batch 2023–2027). He maintains an 8.5/10 CGPA.",
+      welcome: "Hi! I am Prince's AI assistant. Ask me anything about my skills, engineering projects, education, or contact details, or choose a suggestion below!",
+      skillsResponse: "Prince is a Software Engineer focused on AI, Backend, Cloud, and Distributed Systems. His tech stack includes React, Node.js, Express, Java, JavaScript, TypeScript, Python, Solidity, PostgreSQL, MongoDB, Redis, ClickHouse, Docker, AWS, and AI integration using Ollama and OpenAI. He has solved 700+ LeetCode problems with a peak rating of 1767.",
+      projectsResponse: "Prince's flagship systems include:\n\n1. **Flux**: An AWS Cloud Cost Optimization Engine.\n2. **Sentinel Gateway**: A distributed API Gateway with AI threat detection (Ollama) and ClickHouse analytics.\n3. **Carbon Credit Verification System**: An Ethereum smart-contract-based verification platform.\n4. **LevelUp**: A scalable e-learning platform with Razorpay and WebSockets.",
+      educationResponse: "Prince is pursuing a B.Tech in Computer Science & Engineering (Data Science) at ABES Engineering College (2023–2027), holding an 8.351 CGPA.",
       contactResponse: "You can connect with Prince via:\n\n- **Email**: chauhanprince21153366@gmail.com\n- **LinkedIn**: linkedin.com/in/prince1184/\n- **GitHub**: github.com/Prince1895\n- **Twitter/X**: x.com/Chauhan18Prince",
-      defaultResponse: "Prince is a 3rd-year CS student at ABES who loves coding, building web apps, and solving LeetCode problems. Ask about his skills, projects, education, or contact details!"
+      defaultResponse: "Prince is a Software Engineer who builds scalable backend systems, cloud-native platforms, AI-powered applications, and distributed software. Ask me about his skills, projects, education, or contact details!"
     }
   },
   bento: {
     nameLine1: "Prince",
     nameLine2: "Kumar",
-    role: "Fullstack Developer",
-    mindsetDescription: "Building my problem-solving muscle. Solving DSA on LeetCode gives me the analytical discipline to write clean and optimal code.",
-    craftDescription: "Building scalable apps, APIs, and pipelines. I leverage modern tools like Docker, Git, AWS, and Tailwind to deploy production-ready code.",
+    role: "Software Engineer -Building AI-Powered • Scalable Software",
+    mindsetDescription: "I enjoy solving engineering challenges through scalable architectures, efficient algorithms, and modern development practices.Strong problem-solving skills built through 700+ LeetCode problems and real-world projects.",
+    craftDescription: "Developing modern applications using React, Node.js, Docker, AWS, and AI technologies with a focus on scalability and maintainability.",
     universityName: "ABES Engineering College",
-    universityDescription: "Pursuing Computer Science & Engineering (specializing in Data Science). Collaborating on hackathons, coding tasks, and web applications.",
+    universityDescription: "Relevant Coursework •Data Structures •Operating Systems •DBMS •Computer Networks •Cloud Computing",
     locationText: "GHAZIABAD, INDIA",
     coordinatesText: "28.6757° N, 77.4912° E",
     timezoneText: "GMT +5:30",
     graduationText: "Expected graduation: 2027",
-    gradeText: "Grade: 8.5 CGPA"
+    gradeText: "Grade: 8.351 CGPA"
   },
   projects: [
     {
       id: "proj-1",
       num: "01",
-      type: "WEB PORTFOLIO",
-      title: "Portfolio - Prince Kumar",
-      description: "A premium personal portfolio website featuring custom animations, a canvas particle field, an interactive Q&A chatbot widget, and a Bento Grid stats layout.",
-      skills: ["React", "Tailwind CSS", "Framer Motion", "Magic UI", "Material UI"],
-      github: "https://github.com/Prince1895/Portfolio-Prince",
-      live: "http://localhost:5173/",
-      gradient: "from-amber-600/25 via-amber-800/10 to-transparent",
+      type: "CLOUD PLATFORM",
+      title: "Flux – Cloud Cost Optimization Engine",
+      description:
+        "A multi-tenant SaaS platform that identifies cloud infrastructure waste across AWS environments. It analyzes idle resources, estimates real-time cost savings, automates multi-region scans, and generates optimization reports through a scalable backend architecture.",
+      skills: [
+        "Node.js",
+        "AWS SDK v3",
+        "React",
+        "PostgreSQL",
+        "Redis",
+        "Docker"
+      ],
+      highlights: [
+        "Multi-Tenant SaaS",
+        "Cloud Cost Analytics",
+        "AWS Infrastructure Scanning"
+      ],
+      github: "https://github.com/Prince1895/Flux",
+      live: "https://flux-web-azure.vercel.app/",
+      gradient: "from-orange-600/25 via-amber-800/10 to-transparent",
     },
+
     {
       id: "proj-2",
       num: "02",
-      type: "FULLSTACK APP",
-      title: "Domiko - Blog Platform",
-      description: "A full-featured blogging platform built with JWT-based authentication, structured RESTful API endpoints, image uploads via ImageKit, and an interactive markdown editor.",
-      github: "https://github.com/Prince1895/Domiko",
-      live: "https://domiko-client.vercel.app/",
-      skills: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "ImageKit.io"],
-      gradient: "from-green-600/25 via-emerald-800/10 to-transparent",
+      type: "DISTRIBUTED SYSTEM",
+      title: "Distributed API Gateway & Log Analytics",
+      description:
+        "A high-throughput API gateway and real-time log analytics platform featuring Redis-powered rate limiting, JWT-based identity tracking, asynchronous log processing with ClickHouse, and AI-driven anomaly detection for secure and scalable backend systems.",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "Redis",
+        "ClickHouse",
+        "WebSockets",
+        "Worker Threads",
+        "JWT",
+        "Docker",
+        "Ollama"
+      ],
+      highlights: [
+        "Distributed API Gateway",
+        "AI Threat Detection",
+        "Real-Time Log Analytics"
+      ],
+      github: "https://github.com/Prince1895/ai-security-cluster",
+      live: "",
+      gradient: "from-red-600/25 via-orange-800/10 to-transparent",
     },
+
     {
       id: "proj-3",
       num: "03",
-      type: "EDUCATIONAL GAME",
-      title: "MathVenture",
-      description: "An interactive, web-based educational math game designed for kids aged 3–8, gamifying basic math operations (addition, subtraction, multiplication, division).",
-      github: "https://github.com/Prince1895/MathVenture",
-      live: "https://mathventure-math-game.netlify.app/",
-      skills: ["React", "Tailwind CSS", "JavaScript", "Netlify"],
-      gradient: "from-purple-600/25 via-indigo-800/10 to-transparent",
+      type: "BLOCKCHAIN PLATFORM",
+      title: "Carbon Credit Verification System",
+      description:
+        "A decentralized carbon credit verification platform built on Ethereum with secure backend APIs, smart contracts, and transparent MRV workflows for immutable verification and trusted carbon credit management.",
+      skills: [
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "Solidity",
+        "Ethereum",
+        "Prisma"
+      ],
+      highlights: [
+        "Smart Contracts",
+        "Blockchain Verification",
+        "Secure REST APIs"
+      ],
+      github: "https://github.com/Prince1895/SIH25038-poject-Blockchain--Based-Blue-Carbon-Registry-and-MRV-System",
+      live: "",
+      gradient: "from-emerald-600/25 via-green-800/10 to-transparent",
     },
+
     {
       id: "proj-4",
       num: "04",
-      type: "CODING PLATFORM",
-      title: "LevelUp Coding",
-      description: "An online coding practice platform built with React, providing a user-friendly environment for studying core algorithms, solving coding tasks, and practicing tech interview preparation.",
-      github: "https://github.com/Prince1895/SkillSphere",
+      type: "EDTECH PLATFORM",
+      title: "LevelUp – Scalable E-Learning Platform",
+      description:
+        "A full-stack e-learning platform with JWT authentication, role-based access control, Razorpay payment integration, real-time progress tracking via WebSockets, and scalable REST APIs optimized for modern learning experiences.",
+      skills: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "AWS",
+        "WebSockets",
+        "Razorpay"
+      ],
+      highlights: [
+        "RBAC Authentication",
+        "Payment Integration",
+        "Real-Time Progress"
+      ],
+      github: "https://github.com/Prince1895/LevelUP",
       live: "https://levelup01.vercel.app/",
-      skills: ["React", "Tailwind CSS", "JavaScript", "Shadcn UI", "Netlify"],
       gradient: "from-blue-600/25 via-sky-800/10 to-transparent",
+    },
+
+    {
+      id: "proj-5",
+      num: "05",
+      type: "CONTENT PLATFORM",
+      title: "Domiko – CMS Platform",
+      description:
+        "A modern content management platform featuring secure JWT authentication, admin-controlled publishing workflows, scalable REST APIs, image management, and an optimized MERN architecture for content delivery.",
+      skills: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+        "ImageKit"
+      ],
+      highlights: [
+        "JWT Authentication",
+        "Admin Dashboard",
+        "RESTful APIs"
+      ],
+      github: "https://github.com/Prince1895/Domiko",
+      live: "https://domiko-client.vercel.app/",
+      gradient: "from-violet-600/25 via-purple-800/10 to-transparent",
+    },
+
+    {
+      id: "proj-6",
+      num: "06",
+      type: "PERSONAL BRAND",
+      title: "Developer Portfolio",
+      description:
+        "A modern portfolio showcasing engineering projects, AI integration, GitHub and LeetCode analytics, interactive animations, and responsive user experiences built with React and Framer Motion.",
+      skills: [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Three.js",
+        "JavaScript"
+      ],
+      highlights: [
+        "AI Assistant",
+        "Interactive UI",
+        "Responsive Design"
+      ],
+      github: "https://github.com/Prince1895/Portfolio-Prince",
+      live: "https://portfolio-prince-kumar.vercel.app/",
+      gradient: "from-indigo-600/25 via-violet-800/10 to-transparent",
+    },
+
+    {
+      id: "proj-7",
+      num: "07",
+      type: "EDUCATIONAL GAME",
+      title: "MathVenture",
+      description:
+        "An interactive educational platform that gamifies mathematics through engaging quizzes, adaptive gameplay, and a responsive interface designed to make learning enjoyable for young students.",
+      skills: [
+        "React",
+        "JavaScript",
+        "Tailwind CSS",
+        "Netlify"
+      ],
+      highlights: [
+        "Gamified Learning",
+        "Responsive UI",
+        "Interactive Gameplay"
+      ],
+      github: "https://github.com/Prince1895/MathVenture",
+      live: "https://mathventure-math-game.netlify.app/",
+      gradient: "from-fuchsia-600/25 via-purple-800/10 to-transparent",
     }
   ]
 };
@@ -149,8 +279,26 @@ export const getPortfolioData = () => {
       id: p.id || `proj-${i + 1}-${Date.now()}`,
       ...p
     }));
+    const mergedHero = { ...defaultPortfolioData.hero, ...parsed.hero };
+    if (mergedHero.chatbot) {
+      if (mergedHero.chatbot.skillsResponse?.includes("1720+") || mergedHero.chatbot.skillsResponse?.includes("React, Node.js, Express, Java, Python")) {
+        mergedHero.chatbot.skillsResponse = defaultPortfolioData.hero.chatbot.skillsResponse;
+      }
+      if (mergedHero.chatbot.projectsResponse?.includes("MathVenture") || mergedHero.chatbot.projectsResponse?.includes("Domiko: A full-stack blogging platform")) {
+        mergedHero.chatbot.projectsResponse = defaultPortfolioData.hero.chatbot.projectsResponse;
+      }
+      if (mergedHero.chatbot.educationResponse?.includes("8.5") || mergedHero.chatbot.educationResponse?.includes("8.5/10 CGPA")) {
+        mergedHero.chatbot.educationResponse = defaultPortfolioData.hero.chatbot.educationResponse;
+      }
+      if (mergedHero.chatbot.welcome?.includes("Hi! I am Prince's AI assistant")) {
+        mergedHero.chatbot.welcome = defaultPortfolioData.hero.chatbot.welcome;
+      }
+      if (mergedHero.chatbot.defaultResponse?.includes("3rd-year CS student")) {
+        mergedHero.chatbot.defaultResponse = defaultPortfolioData.hero.chatbot.defaultResponse;
+      }
+    }
     return {
-      hero: { ...defaultPortfolioData.hero, ...parsed.hero },
+      hero: mergedHero,
       bento: { ...defaultPortfolioData.bento, ...parsed.bento },
       projects: projectsWithId,
     };
