@@ -1,5 +1,5 @@
 
-# 🌐 Portfolio Website — Prince Kumar
+#  Portfolio Website — Prince Kumar
 
 This is a full-stack personal portfolio website built using the **MERN stack** and deployed using **Vercel**. It showcases projects, education, skills, and a personal timeline in an interactive format.
 
@@ -74,20 +74,8 @@ Use [Vercel's Serverless Functions](https://vercel.com/docs/functions) to deploy
 
 ---
 
-## 📸 Screenshots
-
-https://github.com/Prince1895/Portfolio-Prince/blob/main/public/desktop-portfolio.png
-
-https://github.com/Prince1895/Portfolio-Prince/blob/main/public/phone-portfolio.jpg
-
----
-
 ## 📮 Contact
 
 For queries, reach out via the Contact section on the portfolio or directly at [chuhanprince21153366@example.com].
 
 ---
-
-## 📄 License
-
-MIT © Prince Kumar
